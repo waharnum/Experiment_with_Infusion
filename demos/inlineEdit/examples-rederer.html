@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <script type="text/javascript" src="../../src/lib/jquery/core/js/jquery.js"></script>
+    <script type="text/javascript" src="../../src/lib/jquery/ui/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/Fluid.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/FluidDocument.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/FluidIoC.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/DataBinding.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/ModelTransformation.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/ModelTransformationTransforms.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/jquery.keyboard-a11y.js"></script>
+    <script type="text/javascript" src="../../src/framework/core/js/FluidView.js"></script>
+
+    <script type="text/javascript" src="infusion-all.js"></script>
+
+
+    <title>Currency Converter</title>
+</head>
+<body>
+<input class="demo-banquet-form-renderButton" type="button" value="Render" />
+<div class="converter">
+
+    <h1>Currency Converter</h1>
+    <p>Converts Canadian currency into other denominations.</p>
+    <p>
+        Convert: <input class="tut-currencyConverter-amount" type="text" size="10"/> CAD to
+        <select class="tut-currencyConverter-currency-selecter">
+        </select>
+    </p>
+    <p>Result: <span class="tut-currencyConverter-result"></span></p>
+</div>
+<div class="large-6 columns">
+    <p>Model:</p>
+    <div>
+        <pre class="tut-currencyConverter-model">
+            This is where the auto-bound model will be displayed.
+        </pre>
+    </div>
+</div>
+<script type="text/javascript" src="examples-rederer.js"></script>
+</body>
+</html>
