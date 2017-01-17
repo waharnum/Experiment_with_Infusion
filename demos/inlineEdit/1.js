@@ -11,11 +11,12 @@ var demo = demo || {};
         },
         model: {
             enter_amount: 15,
+            enter_amount_string: "15",
             display_amount: 0,
             heading: "Hello...Welcome..!!"
         },
         protoTree: {
-            enter_amount: "${enter_amount}",
+            enter_amount: "${enter_amount_string}",
             display_amount: "${display_amount}",
             heading: "${heading}"
         },
@@ -25,7 +26,7 @@ var demo = demo || {};
                 func: "{that}.refreshView"
             }
         },
-        modelRelay: {
+        modelRelay: [{
             source: "{demo.currencyConverter}.model.enter_amount",
             target: "display_amount",
             singleTransform: {
@@ -33,6 +34,14 @@ var demo = demo || {};
                 factor: 0.001
             }
         },
+        {
+            source: "{demo.currencyConverter}.model.enter_amount_string",
+            target: "enter_amount",
+            singleTransform: {
+                type: "fluid.transforms.stringToNumber"
+            }
+        }
+        ],
         listeners: {
             //"onCreate.output": "{that}.output"
         },
